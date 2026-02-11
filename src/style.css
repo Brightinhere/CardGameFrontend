@@ -1,0 +1,261 @@
+:root {
+  font-family: "Inter", system-ui, sans-serif;
+  color: #1f2937;
+  background-color: #f8fafc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.app {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 32px 20px 60px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.subtitle {
+  margin-top: 4px;
+  color: #6b7280;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  padding: 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.04);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+input[type="text"] {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.12);
+}
+
+button.primary {
+  background: #2563eb;
+  color: white;
+}
+
+button.secondary {
+  background: #e5e7eb;
+}
+
+button.ghost {
+  background: transparent;
+  border: 1px solid #d1d5db;
+}
+
+.room-info ul {
+  margin: 8px 0 0;
+  padding-left: 18px;
+}
+
+.rooms-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.rooms-list {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 16px;
+  background: #f8fafc;
+}
+
+.rooms-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.room-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.room-item .muted {
+  display: block;
+}
+
+.muted {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.error {
+  margin-top: 12px;
+  color: #b91c1c;
+  background: #fee2e2;
+  padding: 10px 12px;
+  border-radius: 8px;
+}
+
+.badge {
+  background: #0f172a;
+  color: #f8fafc;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.dealer,
+.player-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 14px;
+}
+
+.dealer-header,
+.player-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.player-card.current {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+.hand {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.card-item {
+  width: 54px;
+  height: 74px;
+  border: 1px solid #cbd5f5;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 6px 8px;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 8px rgba(15, 23, 42, 0.08);
+}
+
+.card-item.red {
+  color: #dc2626;
+  border-color: #fecaca;
+}
+
+.card-rank {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.card-suit {
+  font-size: 18px;
+  text-align: right;
+}
+
+.hand-meta {
+  margin-top: 8px;
+  display: flex;
+  gap: 12px;
+  font-size: 13px;
+  color: #475569;
+}
+
+.flag {
+  background: #dcfce7;
+  color: #166534;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.flag.bust {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.players {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.hint {
+  margin-top: 10px;
+  color: #6b7280;
+}
+
+.empty-state {
+  text-align: center;
+  color: #6b7280;
+}
