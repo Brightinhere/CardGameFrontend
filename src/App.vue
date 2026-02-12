@@ -3,7 +3,7 @@ import { onMounted, onUnmounted, reactive } from "vue";
 import RoomSection from "./components/RoomSection.vue";
 import GameSection from "./components/GameSection.vue";
 
-const API_BASE_URL = "http://localhost:8080";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8080";
 
 const state = reactive({
   roomId: "",
